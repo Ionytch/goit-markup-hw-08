@@ -1,6 +1,11 @@
 /* what we do section */
 .about {
-    padding-top: 0;
+    display: none;
+    @include desktop {
+    display: contents;
+        padding-top: 0;
+    }
+    
 }
 
 .about__list {

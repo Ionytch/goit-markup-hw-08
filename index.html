@@ -25,15 +25,15 @@
   </head>
   <body>
     <!--inside of header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <a class="logo header__logo link" href="/" lang="en">
           Web<span class="logostyle-header">Studio</span>
         </a>
         <nav class="navigation">
-          <ul class="navigation__list"> -->
-    <!--navigation bar-->
-    <!-- <li class="navigation__item">
+          <ul class="navigation__list">
+            <!--navigation bar-->
+            <li class="navigation__item">
               <a class="navigation__link link navigation--underline" href="index.html">Студія</a>
             </li>
             <li class="navigation__item">
@@ -43,9 +43,9 @@
               <a class="navigation__link link" href="">Контакти</a>
             </li>
           </ul>
-        </nav> -->
-    <!--contacts bar-->
-    <!-- <ul class="contacts">
+        </nav>
+        <!--contacts bar-->
+        <ul class="contacts">
           <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com">
               <svg class="contacts__icon" width="16px" height="12px">
@@ -62,8 +62,42 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-open-btn">w</button>
       </div>
-    </header> -->
+      <!--mob menu-->
+      <div class="mob-menu">
+        <div class="container">
+          <button type="button" class="menu-close-btn">x</button>
+          <nav class="mob-navigation">
+            <!--menu navigation bar-->
+            <ul class="mob-navigation__list">
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="index.html">Студія</a>
+              </li>
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="portfolio.html">Портфоліо</a>
+              </li>
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <!--menu contacts bar-->
+          <ul class="mob-contacts">
+            <li class="mob-contacts__tel">
+              <a class="mob-contacts__link link mob-tel" href="tel:+380961111111">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="mob-contacts__mail">
+              <a class="mob-contacts__link link mob-mail" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="hero overlay">
         <div class="container">
@@ -107,12 +141,13 @@
         </div>
       </section>
       <!-- what we do -->
-      <!-- <section class="about section">
+      <section class="about section">
         <div class="container">
           <h2 class="section__title">Чим ми займаємось</h2>
           <ul class="about__list">
             <li class="about__item">
               <img
+                srcset="images/what-we-do/img1optimized.jpg 1x, images/what-we-do/img1-2x.jpg 2x"
                 src="images/what-we-do/img1optimized.jpg"
                 alt="человек набирает код"
                 width="370"
@@ -122,6 +157,7 @@
             </li>
             <li class="about__item">
               <img
+                srcset="images/what-we-do/img2optimized.jpg 1x, images/what-we-do/img2-2x.jpg 2x"
                 src="images/what-we-do/img2optimized.jpg"
                 alt="человек разрабатывает дизайн"
                 width="370"
@@ -131,6 +167,7 @@
             </li>
             <li class="about__item">
               <img
+                srcset="images/what-we-do/img3optimized.jpg 1x, images/what-we-do/img3-2x.jpg 2x"
                 src="images/what-we-do/img3optimized.jpg"
                 alt="человек работает с палитрой"
                 width="370"
@@ -140,19 +177,43 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- our team -->
       <section class="team section">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="photo-list">
             <li class="photo-list__item">
-              <img
-                src="images/personnel/img1optimized.jpg"
-                alt="Фото Игоря Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/personnel/img1optimized.jpg 1x,
+                    ./images/personnel/team1-2x.jpg      2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team1-tb.jpg    1x,
+                    ./images/adaptation/team1-tb-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team1-mb.jpg    1x,
+                    ./images/adaptation/team1-mb-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/adaptation/team1-mb.jpg"
+                  alt="Фото Игоря Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="photo-list__context">
                 <h3 class="photo-list__name">Ігор Дем'яненко</h3>
                 <p class="photo-list__text">Product Designer</p>
@@ -185,12 +246,36 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <img
-                src="images/personnel/img2optimized.jpg"
-                alt="Фото Ольги Репиной"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/personnel/img2optimized.jpg 1x,
+                    ./images/personnel/team2-2x.jpg      2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team2-tb.jpg    1x,
+                    ./images/adaptation/team2-tb-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team2-mb.jpg    1x,
+                    ./images/adaptation/team2-mb-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/adaptation/team2-mb.jpg"
+                  alt="Фото Ольги Репиной"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="photo-list__context">
                 <h3 class="photo-list__name">Ольга Рєпіна</h3>
                 <p class="photo-list__text">Frontend Developer</p>
@@ -223,12 +308,36 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <img
-                src="images/personnel/img3optimized.jpg"
-                alt="Фото Николая Тарасова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/personnel/img3optimized.jpg 1x,
+                    ./images/personnel/team3-2x.jpg      2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team3-tb.jpg    1x,
+                    ./images/adaptation/team3-tb-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team3-mb.jpg    1x,
+                    ./images/adaptation/team3-mb-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/adaptation/team3-mb.jpg"
+                  alt="Фото Николая Тарасова"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="photo-list__context">
                 <h3 class="photo-list__name">Микола Тарасов</h3>
                 <p class="photo-list__text">Marketing</p>
@@ -261,12 +370,36 @@
               </div>
             </li>
             <li class="photo-list__item">
-              <img
-                src="images/personnel/img4optimized.jpg"
-                alt="Фото Михаила Ермакова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/personnel/img4optimized.jpg 1x,
+                    ./images/personnel/team4-2x.jpg      2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team4-tb.jpg    1x,
+                    ./images/adaptation/team4-tb-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/adaptation/team4-mb.jpg    1x,
+                    ./images/adaptation/team4-mb-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/adaptation/team4-mb.jpg"
+                  alt="Фото Михаила Ермакова"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="photo-list__context">
                 <h3 class="photo-list__name">Михайло Єрмаков</h3>
                 <p class="photo-list__text">UI Designer</p>
