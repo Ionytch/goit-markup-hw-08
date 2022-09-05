@@ -10,16 +10,31 @@
 .logo {
     font-family: var(--secondary-font);
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
     color: var(--linkcolor);
+    @include desktop {
+    font-size: 26px;
+    line-height: 1.19;    
+    }
 }
 
 .header__logo {
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+padding-top: 16px;
+padding-bottom: 16px;
+   @include tablet{
+    margin-right: 88px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+   } 
+    
+    @include desktop {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;       
+    }
+    
 }
 
 .logostyle-header {
@@ -28,11 +43,15 @@
 
 .navigation {
     display: none;
+    @include tablet {
+        display: contents;
+    }
 }
 
 .navigation__list {
     display: flex;
     align-items: center;
+    margin-right: 96px;
 }
 
 .navigation__item {
@@ -51,6 +70,7 @@
     letter-spacing: 0.02em;
     position: relative;
     padding-bottom: 32px;
+    
 }
 
 .navigation--underline::after {
@@ -66,9 +86,13 @@
 
 .contacts {
     display: none;
-    margin-left: auto;
-    // display: flex;
-    align-items: center;
+    @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-left: auto;
+            align-items: center;
+        }
 }
 
 .contacts__item {
@@ -92,12 +116,18 @@
 
 .contacts__link {
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.02em;
     color: var(--othertext-color);
     display: flex;
     align-items: center;
+    @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
+     
+    }
 }
 
 .menu-open-btn{
@@ -121,14 +151,63 @@
         flex-direction: column;
         justify-content: space-between;
     }
-   
+    @include tablet {
+    display: none;
+     }
 }
+
+.menu-open-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-size: cover;
+    background-color: var(--whitetext-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+        display: none;
+    }
+}
+
+ .menu-open-button {
+     fill: #000000;
+     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+     .menu-open-btn:focus &,
+     .menu-open-btn:hover & {
+         fill: var(--linkcolor);
+     }
+ }
 
 .menu-close-btn{
     position: absolute;
     top: 10px;
     right: 15px;
-}
+     width: 40px;
+    height: 40px;
+     border: none;
+       background-size: cover;
+     background-color: var(--whitetext-color);
+     cursor: pointer;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .menu-close-button {
+     fill: #000000;
+     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+     .menu-close-btn:focus &,
+     .menu-close-btn:hover & {
+         fill: var(--linkcolor);
+     }
+ }
 
 .mob-navigation__list{
     margin-top: 48px;
@@ -150,22 +229,18 @@
         color: #212121;
 }
 
-.mob-contacts{}
-
 .mob-contacts__tel{
     margin-bottom: 32px;
 }
 .mob-contacts__mail{
     margin-bottom: 64px;
 }
-.mob-contacts__link{}
-
 .mob-mail{
     font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
-        line-height: 28px;
+        line-height: 1.17;
         letter-spacing: 0.02em;
     
         color: #757575;
@@ -175,9 +250,36 @@
         font-style: normal;
         font-weight: 500;
         font-size: 34px;
-        line-height: 40px;
+        line-height: 1.18;
         /* identical to box height */
     
         letter-spacing: 0.02em;
     
         color: #2196F3;}
+
+.mob-soc{
+    display: flex;
+    }
+
+.mob-soc__item{
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: 1px solid rgba(33, 33, 33, 0.2); ;
+}
+
+.mob-soc__link{
+    font-family: var(--main-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        /* identical to box height, or 122% */    
+        letter-spacing: 0.02em;    
+        color: #2196F3;
+        
+}
+.mob-soc__item:first-child{
+    border-left: none;
+    padding-left: 0;
+}
+

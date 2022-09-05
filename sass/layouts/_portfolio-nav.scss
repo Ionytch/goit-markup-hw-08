@@ -1,9 +1,15 @@
 /* portfolio navigation section */
 .portfolio-navigation {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    row-gap: 15px;
+    @include tablet{
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 50px;   
+    }
+    
 }
 
 .portfolio-list {

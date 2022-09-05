@@ -25,7 +25,7 @@
   </head>
   <body>
     <!--inside of header-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <a class="logo header__logo link" href="/" lang="en">
           Web<span class="logostyle-header">Studio</span>
@@ -33,21 +33,19 @@
         <nav class="navigation">
           <ul class="navigation__list">
             <!--navigation bar-->
-    <!-- <li class="navigation__item">
-              <a class="navigation__link link" href="index.html">Студія</a>
+            <li class="navigation__item">
+              <a class="navigation__link link navigation--underline" href="index.html">Студія</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link link navigation--underline" href="portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="navigation__link link" href="portfolio.html">Портфоліо</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link link" href="">Контакти</a>
             </li>
           </ul>
-        </nav> -->
-    <!--contacts bar-->
-    <!-- <ul class="contacts">
+        </nav>
+        <!--contacts bar-->
+        <ul class="contacts">
           <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com">
               <svg class="contacts__icon" width="16px" height="12px">
@@ -64,8 +62,66 @@
             </a>
           </li>
         </ul>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-open-button" width="19px" height="19px">
+            <use href="./images/icons/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <!--mob menu-->
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <button type="button" class="menu-close-btn" data-menu-close>
+            <svg class="menu-close-button" width="19px" height="19px">
+              <use href="./images/icons/close1.svg#close"></use>
+            </svg>
+          </button>
+          <nav class="mob-navigation">
+            <!--menu navigation bar-->
+            <ul class="mob-navigation__list">
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="index.html">Студія</a>
+              </li>
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="portfolio.html">Портфоліо</a>
+              </li>
+              <li class="mob-navigation__item">
+                <a class="mob-navigation__link link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <!--menu contacts bar-->
+            <ul>
+              <li class="mob-contacts__tel">
+                <a class="mob-contacts__link link mob-tel" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mob-contacts__mail">
+                <a class="mob-contacts__link link mob-mail" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mob-soc">
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">Instagram</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">Twitter</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">Facebook</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </header>
     <main>
       <!-- portfolio navigation -->
       <section class="section">
@@ -520,10 +576,11 @@
         </div>
       </section>
     </main>
+    <!--footer-->
     <footer class="footer">
       <div class="container footer-container">
         <div>
-          <a class="link mainpage-link footer-logo" href="/" lang="en">
+          <a class="logo footer-logo link" href="/" lang="en">
             Web<span class="logostyle-footer">Studio</span>
           </a>
           <address class="address">
@@ -594,6 +651,7 @@
           </div>
         </form>
       </div>
+    </footer>
     </footer>
   </body>
 </html>

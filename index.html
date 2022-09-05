@@ -62,12 +62,20 @@
             </a>
           </li>
         </ul>
-        <button type="button" class="menu-open-btn">w</button>
+        <button type="button" class="menu-open-btn" data-menu-open>
+          <svg class="menu-open-button" width="19px" height="19px">
+            <use href="./images/icons/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
       <!--mob menu-->
-      <div class="mob-menu">
+      <div class="mob-menu is-hidden" data-menu>
         <div class="container">
-          <button type="button" class="menu-close-btn">x</button>
+          <button type="button" class="menu-close-btn" data-menu-close>
+            <svg class="menu-close-button" width="19px" height="19px">
+              <use href="./images/icons/close1.svg#close"></use>
+            </svg>
+          </button>
           <nav class="mob-navigation">
             <!--menu navigation bar-->
             <ul class="mob-navigation__list">
@@ -82,19 +90,35 @@
               </li>
             </ul>
           </nav>
-          <!--menu contacts bar-->
-          <ul class="mob-contacts">
-            <li class="mob-contacts__tel">
-              <a class="mob-contacts__link link mob-tel" href="tel:+380961111111">
-                +38 096 111 11 11
-              </a>
-            </li>
-            <li class="mob-contacts__mail">
-              <a class="mob-contacts__link link mob-mail" href="mailto:info@devstudio.com">
-                info@devstudio.com
-              </a>
-            </li>
-          </ul>
+          <div>
+            <!--menu contacts bar-->
+            <ul>
+              <li class="mob-contacts__tel">
+                <a class="mob-contacts__link link mob-tel" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="mob-contacts__mail">
+                <a class="mob-contacts__link link mob-mail" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="mob-soc">
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">Instagram</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">Twitter</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">Facebook</a>
+              </li>
+              <li class="mob-soc__item">
+                <a class="mob-soc__link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -556,7 +580,7 @@
         </form>
       </div>
     </footer>
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close" data-modal-close>
           <svg class="close-button" width="17px" height="17px">
@@ -645,7 +669,8 @@
           <button type="submit" class="btn submit">Відправити</button>
         </form>
       </div>
-    </div> -->
-    <!-- <script src="./js/modal.js"></script> -->
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
