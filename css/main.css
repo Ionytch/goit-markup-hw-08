@@ -91,6 +91,13 @@ body {
   font-size: 28px;
   line-height: 33px;
 }
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
 
 .btn {
   cursor: pointer;
@@ -404,6 +411,14 @@ body {
   background-color: #2f303a;
   padding: 118px 0px;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 .overlay {
   background-image: var(--bg-gradient), url(../images/adaptation/header-img-mb.jpg);
@@ -573,8 +588,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .about {
-    display: contents;
-    padding-top: 0;
+    display: block;
   }
 }
 
@@ -689,6 +703,11 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (max-width: 479px) {
+  .client {
+    justify-content: center;
+  }
 }
 
 .client__item {
@@ -1159,6 +1178,11 @@ body {
   .portfolio-navigation {
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-navigation {
     margin-bottom: 50px;
   }
 }

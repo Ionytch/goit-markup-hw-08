@@ -2,10 +2,8 @@
 .about {
     display: none;
     @include desktop {
-    display: contents;
-        padding-top: 0;
-    }
-    
+    display: block;
+     }    
 }
 
 .about__list {

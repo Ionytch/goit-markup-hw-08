@@ -2,10 +2,13 @@
     width: 100%;
     background-color: #2f303a;
     padding: 118px 0px;
-    // padding-top: 200px;
-    // padding-bottom: 200px;
-    // padding-left: 0;
-    // padding-right: 0;
+    @include desktop {
+     padding-top: 200px;
+     padding-bottom: 200px;
+     padding-left: 0;
+     padding-right: 0;   
+    }
+
 }
 
 .overlay {    
