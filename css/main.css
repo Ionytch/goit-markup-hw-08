@@ -223,10 +223,15 @@ body {
 }
 
 .contacts__item {
-  margin-right: 50px;
-}
-.contacts__item:last-child {
   margin-right: 0;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    margin-right: 50px;
+  }
+  .contacts__item:last-child {
+    margin-right: 0;
+  }
 }
 
 .contacts__icon {
@@ -254,10 +259,6 @@ body {
   }
 }
 
-.menu-open-btn {
-  margin-left: auto;
-}
-
 .mob-menu {
   position: fixed;
   background-color: #ffffff;
@@ -283,9 +284,7 @@ body {
 }
 
 .menu-open-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
+  margin-left: auto;
   width: 40px;
   height: 40px;
   border: none;
